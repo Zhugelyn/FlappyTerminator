@@ -8,12 +8,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BirdBullet
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Bird
+  - EnemyBullet
+  - Enemy
   - 
   - 
   - 

@@ -1,18 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private EnemySpawner _spawner;
+
+    private int _count;
+
+    public event Action<int> Changed;
+
+    public int Count => _count;
+
+    private void OnEnable()
     {
-        
+        _spawner.Pooling += AddPoints;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        _spawner.Pooling -= AddPoints;
+    }
+
+    private void AddPoints()
+    {
+        _count++;
+
+        Changed?.Invoke(_count);
+    }
+
+    public void Reset()
+    {
+        _count = 0;
+
+        Changed?.Invoke(_count);
     }
 }
