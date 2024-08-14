@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,8 @@ public class Game : MonoBehaviour
     [SerializeField] private Bird _bird;
     [SerializeField] private StartScreen _startScreen;
     [SerializeField] private EndGameScreen _endGameScreen;
+
+    public event Action OnStartGame;
 
     private void OnEnable()
     {
@@ -49,6 +52,6 @@ public class Game : MonoBehaviour
     private void StartGame()
     {
         Time.timeScale = 1;
-        _bird.Reset();
+        OnStartGame?.Invoke();
     }
 }

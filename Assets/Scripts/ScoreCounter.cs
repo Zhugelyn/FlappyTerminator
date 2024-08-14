@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ScoreCounter : MonoBehaviour
 {
-    [SerializeField] private EnemySpawner _spawner;
+    [SerializeField] private EnemySpawner _enemySpawner;
 
     private int _count;
 
@@ -13,24 +13,17 @@ public class ScoreCounter : MonoBehaviour
 
     private void OnEnable()
     {
-        _spawner.Pooling += AddPoints;
+        _enemySpawner.Pooling += AddPoints;
     }
 
     private void OnDisable()
     {
-        _spawner.Pooling -= AddPoints;
+        _enemySpawner.Pooling -= AddPoints;
     }
 
     private void AddPoints()
     {
         _count++;
-
-        Changed?.Invoke(_count);
-    }
-
-    public void Reset()
-    {
-        _count = 0;
 
         Changed?.Invoke(_count);
     }

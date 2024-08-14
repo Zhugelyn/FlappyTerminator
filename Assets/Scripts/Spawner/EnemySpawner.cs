@@ -6,7 +6,7 @@ public class EnemySpawner : Spawner<Enemy>
 {
     [SerializeField] private float _delay;
     [SerializeField] private BoxCollider2D _movementArea;
-    [SerializeField] private Bird _bird;
+    [SerializeField] private Game _game;
 
     private Coroutine _coroutine;
 
@@ -14,13 +14,13 @@ public class EnemySpawner : Spawner<Enemy>
 
     private void OnEnable()
     {
-        _coroutine = StartCoroutine(Spawn());
-        _bird.ResetGame += ClearPool;
+        _game.OnStartGame += StartSpawn;
     }
 
     private void OnDisable()
     {
-        _bird.ResetGame -= ClearPool;
+        _game.OnStartGame -= StartSpawn;
+
         if (_coroutine != null)
             StopCoroutine(_coroutine);
     }
@@ -31,13 +31,13 @@ public class EnemySpawner : Spawner<Enemy>
 
         while (enabled)
         {
+            yield return wait;
+             
             var enemy = Pool.Get();
             enemy.Init(_movementArea);
 
             if (enemy.TryGetComponent(out EnemyCollisionHandler enemyCollisionHandler))
                 enemyCollisionHandler.Detected += ReturnToPool;
-
-            yield return wait;
         }
     }
 
@@ -49,10 +49,9 @@ public class EnemySpawner : Spawner<Enemy>
         enemy.GetComponent<EnemyCollisionHandler>().Detected -= ReturnToPool;
     }
 
-    private void ClearPool()
+    private void StartSpawn()
     {
-        Debug.Log(" Dispose");
-        Pool.Clear();
+        _coroutine = StartCoroutine(Spawn());
     }
 }
 

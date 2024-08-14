@@ -601,7 +601,7 @@ MonoBehaviour:
   _poolMaxSize: 10
   _delay: 2
   _movementArea: {fileID: 531226211}
-  _bird: {fileID: 769424471}
+  _game: {fileID: 1841100250}
 --- !u!4 &523726585
 Transform:
   m_ObjectHideFlags: 0
