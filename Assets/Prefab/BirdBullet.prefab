@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5439525673128165350}
   - component: {fileID: 6958553465441412358}
   - component: {fileID: -393588847664548958}
-  - component: {fileID: 6350879870949785948}
+  - component: {fileID: 8377702917990381265}
   m_Layer: 3
   m_Name: BirdBullet
   m_TagString: Untagged
@@ -29,9 +29,9 @@ Transform:
   m_GameObject: {fileID: 2765837354455434579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2576, y: 0.2576, z: 0.2576}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0.2009, y: 0.2172, z: 0}
+  m_LocalScale: {x: 5.708601, y: 2.01, z: 2.01}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0, g: 0.14147094, b: 0.9528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,7 +113,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &-393588847664548958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,9 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8a9c77321e74f48a16b83b11f3ae8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _force: 15
---- !u!58 &6350879870949785948
-CircleCollider2D:
+  _speed: 15
+--- !u!61 &8377702917990381265
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -160,5 +160,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0

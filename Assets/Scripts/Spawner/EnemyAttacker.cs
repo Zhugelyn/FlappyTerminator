@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyBulletSpawner : BulletSpawner
+public class EnemyAttacker : BulletSpawner
 {
     [SerializeField] private float _delay;
+    [SerializeField] private float _directionX;
 
     private Coroutine _coroutine;
 
@@ -24,7 +25,8 @@ public class EnemyBulletSpawner : BulletSpawner
 
         while (enabled)
         {
-            Get();
+            var bullet = Get();
+            bullet.Init(Quaternion.identity, _directionX);
 
             yield return wait;
         }

@@ -1,13 +1,19 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour, IInterectable
 {
-    [SerializeField] private float _force;
+    [SerializeField] private float _speed;
 
-    public void Force(float directionX)
+    private float _directionX;
+
+    private void Update()
     {
-        var rigidbody = GetComponent<Rigidbody2D>();
-        rigidbody.velocity = new Vector2(directionX, 0) * _force;
+        transform.Translate(Vector2.right * _speed * _directionX * Time.deltaTime);
+    }
+
+    public void Init(Quaternion quaternion, float directionX)
+    {
+        transform.rotation = quaternion;
+        _directionX = directionX;
     }
 }

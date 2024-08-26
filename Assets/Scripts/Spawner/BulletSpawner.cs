@@ -3,22 +3,25 @@ using UnityEngine;
 
 public class BulletSpawner : Spawner<Bullet>
 {
-    [SerializeField] protected float DirectionX;
     [SerializeField] private float _lifetime;
 
     private Coroutine _coroutine;
 
-    protected Bullet Get()
+    public virtual Bullet Get()
     {
         var bullet = Pool.Get();
-        bullet.Force(DirectionX);
 
-        _coroutine = StartCoroutine(CountDownLife(bullet));
+        StartCoroutine(bullet);
 
         return bullet;
     }
 
-    private IEnumerator CountDownLife(Bullet bullet)
+    protected void StartCoroutine(Bullet bullet)
+    {
+        _coroutine = StartCoroutine(CountDownLife(bullet));
+    }
+
+    protected IEnumerator CountDownLife(Bullet bullet)
     {
         float delay = 1f;
         var wait = new WaitForSeconds(delay);

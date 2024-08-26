@@ -8,7 +8,7 @@ public class Game : MonoBehaviour
     [SerializeField] private StartScreen _startScreen;
     [SerializeField] private EndGameScreen _endGameScreen;
 
-    public event Action OnStartGame;
+    public event Action GameStarted;
 
     private void OnEnable()
     {
@@ -52,6 +52,6 @@ public class Game : MonoBehaviour
     private void StartGame()
     {
         Time.timeScale = 1;
-        OnStartGame?.Invoke();
+        GameStarted?.Invoke();
     }
 }

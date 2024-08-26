@@ -797,17 +797,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1900898381608080427, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
   m_PrefabInstance: {fileID: 6473924775348061563}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &665276588 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1439306928781074690, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-  m_PrefabInstance: {fileID: 6473924775348061563}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1029dfed1915bc64eb68fc56e5359c43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &769424471 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7022708261488432161, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
@@ -2155,25 +2144,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 442049621684602358, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-      propertyPath: _speed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1019470811436941909, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-      propertyPath: _bird
-      value: 
-      objectReference: {fileID: 769424471}
-    - target: {fileID: 1019470811436941909, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-      propertyPath: _spawner
-      value: 
-      objectReference: {fileID: 523726584}
     - target: {fileID: 1019470811436941909, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
       propertyPath: _enemySpawner
       value: 
       objectReference: {fileID: 523726584}
     - target: {fileID: 1900898381608080427, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.27
+      value: -4.21
       objectReference: {fileID: 0}
     - target: {fileID: 1900898381608080427, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2211,41 +2188,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2721570397269593430, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-      propertyPath: _bird
-      value: 
-      objectReference: {fileID: 769424471}
-    - target: {fileID: 2721570397269593430, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-      propertyPath: _prefab
-      value: 
-      objectReference: {fileID: -393588847664548958, guid: 11f64fff198434745b5f52e924f3251e, type: 3}
-    - target: {fileID: 2721570397269593430, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-      propertyPath: _lifetime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721570397269593430, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-      propertyPath: _poolMaxSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721570397269593430, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-      propertyPath: _collisionHandler
-      value: 
-      objectReference: {fileID: 665276588}
-    - target: {fileID: 2727659653086636682, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7022708261488432161, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-      propertyPath: _collisionHandler
-      value: 
-      objectReference: {fileID: 665276588}
     - target: {fileID: 8045197614962099069, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
       propertyPath: m_Name
       value: Bird
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8752442516617347284, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}

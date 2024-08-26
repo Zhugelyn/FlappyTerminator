@@ -14,12 +14,12 @@ public class EnemySpawner : Spawner<Enemy>
 
     private void OnEnable()
     {
-        _game.OnStartGame += StartSpawn;
+        _game.GameStarted += StartSpawn;
     }
 
     private void OnDisable()
     {
-        _game.OnStartGame -= StartSpawn;
+        _game.GameStarted -= StartSpawn;
 
         if (_coroutine != null)
             StopCoroutine(_coroutine);

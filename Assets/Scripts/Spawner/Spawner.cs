@@ -15,7 +15,6 @@ public abstract class Spawner<T> : MonoBehaviour where T: MonoBehaviour
         createFunc: OnCreate,
         actionOnGet: (obj) => OnGet(obj),
         actionOnRelease: (obj) => OnRelease(obj),
-        actionOnDestroy: (obj) => ActionOnDestroy(obj),
         maxSize: _poolMaxSize);
     }
 
@@ -33,10 +32,5 @@ public abstract class Spawner<T> : MonoBehaviour where T: MonoBehaviour
     protected virtual void OnRelease(T obj)
     {
         obj.gameObject.SetActive(false);
-    }
-
-    protected virtual void ActionOnDestroy(T obj)
-    {
-        Destroy(obj.gameObject);
     }
 }

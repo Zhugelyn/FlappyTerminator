@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160edc1b27e9a584b8f14ec290532486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
+  _speed: 8
 --- !u!1 &8665527490692739968
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +208,6 @@ MonoBehaviour:
   _prefab: {fileID: -393588847664548958, guid: 44e6ff58672a00643a4ad532e1f680ca, type: 3}
   _spawnPosition: {fileID: 3213457817181322974}
   _poolMaxSize: 50
-  _bird: {fileID: 7022708261488432161, guid: 8dee8b2c0fe1b0a47a619b00a50dce2f, type: 3}
-  DirectionX: -1
   _lifetime: 3
   _delay: 2
+  _directionX: -1

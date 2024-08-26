@@ -13,6 +13,7 @@ public class BirdMover : MonoBehaviour
     private Quaternion _maxRotation;
     private Quaternion _minRotation;
 
+    private KeyCode _jump = KeyCode.Space;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class BirdMover : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(_jump))
         {
             _rigidbody.velocity = new Vector2(_speed, _tapForce);
             transform.rotation = _maxRotation;
