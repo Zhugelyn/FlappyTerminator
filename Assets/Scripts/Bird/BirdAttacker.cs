@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class BirdAttacker : MonoBehaviour
 {
     [SerializeField] private Bird _bird;
@@ -15,6 +14,4 @@ public class BirdAttacker : MonoBehaviour
             bullet.Init(_bird.transform.rotation, _directionX);
         }
     }
-
-
 }
